@@ -242,7 +242,7 @@ const ns = 'http://www.w3.org/2000/svg';
 const clamp = (n,a,b) => Math.max(a,Math.min(b,n));
 const cfg = window.LAST_ASYLUM_CONFIG || {};
 const MAP_ID = cfg.mapId || 'main';
-const configured = /^https:\/\/.+\.supabase\.co$/i.test(cfg.supabaseUrl || '') && !!cfg.supabaseAnonKey && !String(cfg.supabaseAnonKey).includes('PASTE_');
+const configured = /^https:\/\/.+\.supabase\.(?:co|com)$/i.test(cfg.supabaseUrl || '') && !!cfg.supabaseAnonKey && !String(cfg.supabaseAnonKey).includes('PASTE_');
 const EDITOR_API_URL = cfg.editorApiUrl || `${cfg.supabaseUrl}/functions/v1/last-asylum-map`;
 
 let supabase = null;
